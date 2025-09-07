@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Guidance - Safehood</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Safehood</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="guidance.html" class="nav-link active">Guidance</a></li>
+                <li><a href="distress.html" class="nav-link">Distress Support</a></li>
+                <li><a href="experts.html" class="nav-link">Find Experts</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero guidance-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Emergency</span> Medical Guidance
+                </h1>
+                <p class="hero-subtitle">
+                    Step-by-step instructions for life-saving procedures. Learn how to respond to emergencies with confidence and save lives when every second counts.
+                </p>
+                <div class="guidance-buttons">
+                    <button class="btn btn-primary" onclick="scrollToProcedures()">
+                        <i class="fas fa-book-medical"></i>
+                        View Procedures
+                    </button>
+                    <button class="btn btn-secondary" onclick="startTraining()">
+                        <i class="fas fa-graduation-cap"></i>
+                        Start Training
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <i class="fas fa-stethoscope pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Emergency Categories -->
+    <section class="emergency-categories">
+        <div class="container">
+            <h2 class="section-title">Emergency Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="showProcedure('cpr')">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cardiac Emergency</h3>
+                    <p>CPR, Cardiac Arrest</p>
+                    <span class="category-time">Critical: 0-4 minutes</span>
+                </div>
+
+                <div class="category-card" onclick="showProcedure('heart-attack')">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Heart Attack</h3>
+                    <p>Chest Pain, Aspirin, Emergency Response</p>
+                    <span class="category-time">Critical: 0-5 minutes</span>
+                </div>
+
+                <div class="category-card" onclick="showProcedure('stroke')">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Stroke (FAST)</h3>
+                    <p>Face, Arm, Speech, Time</p>
+                    <span class="category-time">Critical: 0-3 hours</span>
+                </div>
+
+                <div class="category-card" onclick="showProcedure('choking')">
+                    <div class="category-icon">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <h3>Choking</h3>
+                    <p>Heimlich Maneuver, Airway Obstruction</p>
+                    <span class="category-time">Critical: 0-4 minutes</span>
+                </div>
+
+                <div class="category-card" onclick="showProcedure('burns')">
+                    <div class="category-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Burns</h3>
+                    <p>Cool Water, Assessment, Medical Care</p>
+                    <span class="category-time">Immediate: Cool for 10-15 min</span>
+                </div>
+
+                <div class="category-card" onclick="showProcedure('first-aid')">
+                    <div class="category-icon">
+                        <i class="fas fa-band-aid"></i>
+                    </div>
+                    <h3>First Aid Basics</h3>
+                    <p>Bleeding, Shock, Assessment</p>
+                    <span class="category-time">Varies by situation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Procedures Section -->
+    <section id="procedures" class="procedures-section">
+        <div class="container">
+            <h2 class="section-title">Emergency Procedures</h2>
+            
+            <!-- CPR Procedure -->
+            <div id="cpr-procedure" class="procedure-card">
+                <div class="procedure-header">
+                    <div class="procedure-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="procedure-info">
+                        <h3>Cardiopulmonary Resuscitation (CPR)</h3>
+                        <p>For adults, children, and infants who are unresponsive and not breathing normally</p>
+                        <div class="procedure-meta">
+                            <span class="difficulty">Difficulty: Moderate</span>
+                            <span class="time">Time: Continuous until help arrives</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="procedure-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Check for Responsiveness</h4>
+                            <p>Tap the person's shoulder and shout "Are you okay?" Look for any movement or response.</p>
+                            <div class="step-tips">
+                                <strong>Tip:</strong> If no response, immediately call 108 or have someone else call.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Call Emergency Services</h4>
+                            <p>Dial 108 immediately. If someone else is present, have them call while you begin CPR.</p>
+                            <div class="step-tips">
+                                <strong>Important:</strong> Every second counts in cardiac arrest.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Position the Person</h4>
+                            <p>Place the person on their back on a firm, flat surface. Remove any clothing from the chest area.</p>
+                            <div class="step-tips">
+                                <strong>Safety:</strong> Ensure the scene is safe before approaching.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Locate Compression Point</h4>
+                            <p>Find the center of the chest (between the nipples). Place the heel of one hand on this spot.</p>
+                            <div class="step-tips">
+                                <strong>Position:</strong> Keep your arms straight and shoulders directly above your hands.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Begin Chest Compressions</h4>
+                            <p>Push hard and fast at a rate of 100-120 compressions per minute. Allow the chest to recoil completely between compressions.</p>
+                            <div class="step-tips">
+                                <strong>Depth:</strong> Compress at least 2 inches (5 cm) for adults.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="6">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Give Rescue Breaths (Optional)</h4>
+                            <p>After 30 compressions, give 2 rescue breaths if trained. If not trained, continue compressions only.</p>
+                            <div class="step-tips">
+                                <strong>Note:</strong> Hands-only CPR is effective for bystanders.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="7">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h4>Continue Cycles</h4>
+                            <p>Continue cycles of 30 compressions and 2 breaths (or compressions only) until help arrives or the person shows signs of life.</p>
+                            <div class="step-tips">
+                                <strong>Signs of Life:</strong> Breathing, movement, or response to touch.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="8">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h4>Use AED if Available</h4>
+                            <p>If an Automated External Defibrillator (AED) is available, use it as soon as possible. Follow the device's voice prompts.</p>
+                            <div class="step-tips">
+                                <strong>Safety:</strong> Continue CPR until the AED is ready to analyze.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-actions">
+                    <button class="btn btn-primary" onclick="startCPRTimer()">
+                        <i class="fas fa-play"></i>
+                        Start CPR Timer
+                    </button>
+                    <button class="btn btn-secondary" onclick="showCPRVideo()">
+                        <i class="fas fa-video"></i>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+
+            <!-- Heimlich Maneuver Procedure -->
+            <div id="choking-procedure" class="procedure-card" style="display: none;">
+                <div class="procedure-header">
+                    <div class="procedure-icon">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <div class="procedure-info">
+                        <h3>Heimlich Maneuver (Abdominal Thrusts)</h3>
+                        <p>For conscious adults and children over 1 year who are choking and cannot speak, cough, or breathe</p>
+                        <div class="procedure-meta">
+                            <span class="difficulty">Difficulty: Easy</span>
+                            <span class="time">Time: Until object is expelled or person becomes unconscious</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="procedure-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Assess the Situation</h4>
+                            <p>Ask "Are you choking?" If the person nods yes but cannot speak, they need the Heimlich maneuver.</p>
+                            <div class="step-tips">
+                                <strong>Signs:</strong> Universal choking sign (hands around throat), inability to speak or cough.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Position Yourself</h4>
+                            <p>Stand behind the person. Wrap your arms around their waist. Make sure they are standing or sitting upright.</p>
+                            <div class="step-tips">
+                                <strong>Stability:</strong> Keep your feet shoulder-width apart for balance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Locate the Compression Point</h4>
+                            <p>Find the navel. Place your fist just above the navel, in the center of the abdomen.</p>
+                            <div class="step-tips">
+                                <strong>Position:</strong> Thumb side of fist against the abdomen.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Perform Abdominal Thrusts</h4>
+                            <p>Grasp your fist with your other hand. Give quick, upward thrusts into the abdomen.</p>
+                            <div class="step-tips">
+                                <strong>Technique:</strong> Thrust inward and upward as if trying to lift the person.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Continue Until Effective</h4>
+                            <p>Repeat thrusts until the object is expelled or the person becomes unconscious.</p>
+                            <div class="step-tips">
+                                <strong>Warning:</strong> If person becomes unconscious, begin CPR immediately.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-actions">
+                    <button class="btn btn-primary" onclick="startChokingTimer()">
+                        <i class="fas fa-play"></i>
+                        Start Timer
+                    </button>
+                    <button class="btn btn-secondary" onclick="showChokingVideo()">
+                        <i class="fas fa-video"></i>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+
+            <!-- Heart Attack Procedure -->
+            <div id="heart-attack-procedure" class="procedure-card" style="display: none;">
+                <div class="procedure-header">
+                    <div class="procedure-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="procedure-info">
+                        <h3>Heart Attack Response</h3>
+                        <p>Immediate response for suspected heart attack - every minute counts</p>
+                        <div class="procedure-meta">
+                            <span class="difficulty">Difficulty: Easy</span>
+                            <span class="time">Time: Immediate action required</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="procedure-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Recognize Symptoms</h4>
+                            <p>Chest pain/pressure, shortness of breath, nausea, cold sweat, pain in arm/jaw/back.</p>
+                            <div class="step-tips">
+                                <strong>Warning:</strong> Symptoms may be different in women (fatigue, nausea, back pain).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Call Emergency Services</h4>
+                            <p>Dial 108 immediately. Do not delay - time is critical for heart muscle survival.</p>
+                            <div class="step-tips">
+                                <strong>Critical:</strong> Call within 5 minutes of symptom onset for best outcomes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Position the Person</h4>
+                            <p>Have them sit down and rest. Loosen tight clothing around neck and chest.</p>
+                            <div class="step-tips">
+                                <strong>Comfort:</strong> Sitting position reduces strain on the heart.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Give Aspirin (If Available)</h4>
+                            <p>If person is conscious and not allergic, give one adult aspirin (325mg) to chew.</p>
+                            <div class="step-tips">
+                                <strong>Important:</strong> Chewing aspirin works faster than swallowing whole.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Monitor and Reassure</h4>
+                            <p>Stay with the person, monitor breathing, and keep them calm until help arrives.</p>
+                            <div class="step-tips">
+                                <strong>Support:</strong> Anxiety can worsen symptoms - stay calm and reassuring.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="6">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Be Ready for CPR</h4>
+                            <p>If person becomes unconscious and stops breathing, begin CPR immediately.</p>
+                            <div class="step-tips">
+                                <strong>Preparation:</strong> Know the person's location for emergency responders.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-actions">
+                    <button class="btn btn-primary" onclick="startHeartAttackTimer()">
+                        <i class="fas fa-play"></i>
+                        Start Response Timer
+                    </button>
+                    <button class="btn btn-secondary" onclick="showHeartAttackVideo()">
+                        <i class="fas fa-video"></i>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stroke Procedure -->
+            <div id="stroke-procedure" class="procedure-card" style="display: none;">
+                <div class="procedure-header">
+                    <div class="procedure-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="procedure-info">
+                        <h3>Stroke Response (FAST)</h3>
+                        <p>Use FAST method to identify and respond to stroke - time is brain</p>
+                        <div class="procedure-meta">
+                            <span class="difficulty">Difficulty: Easy</span>
+                            <span class="time">Time: Critical - call within 3 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="procedure-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-number">F</div>
+                        <div class="step-content">
+                            <h4>Face Drooping</h4>
+                            <p>Ask person to smile. Does one side of the face droop or feel numb?</p>
+                            <div class="step-tips">
+                                <strong>Test:</strong> Uneven smile indicates possible stroke.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <div class="step-number">A</div>
+                        <div class="step-content">
+                            <h4>Arm Weakness</h4>
+                            <p>Ask person to raise both arms. Does one arm drift downward or feel weak?</p>
+                            <div class="step-tips">
+                                <strong>Test:</strong> Inability to keep arms level indicates stroke.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <div class="step-number">S</div>
+                        <div class="step-content">
+                            <h4>Speech Difficulty</h4>
+                            <p>Ask person to repeat a simple sentence. Is speech slurred or strange?</p>
+                            <div class="step-tips">
+                                <strong>Test:</strong> "The sky is blue" - any speech problems indicate stroke.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <div class="step-number">T</div>
+                        <div class="step-content">
+                            <h4>Time to Call</h4>
+                            <p>If ANY of these signs are present, call 108 immediately. Note the time symptoms started.</p>
+                            <div class="step-tips">
+                                <strong>Critical:</strong> Treatment is most effective within 3 hours of onset.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Additional Signs</h4>
+                            <p>Watch for sudden severe headache, dizziness, confusion, or vision problems.</p>
+                            <div class="step-tips">
+                                <strong>Note:</strong> Not all strokes show classic FAST symptoms.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="6">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Position and Monitor</h4>
+                            <p>Keep person comfortable, monitor breathing, and do not give food or water.</p>
+                            <div class="step-tips">
+                                <strong>Safety:</strong> Person may have difficulty swallowing - risk of choking.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-actions">
+                    <button class="btn btn-primary" onclick="startStrokeTimer()">
+                        <i class="fas fa-play"></i>
+                        Start FAST Assessment
+                    </button>
+                    <button class="btn btn-secondary" onclick="showStrokeVideo()">
+                        <i class="fas fa-video"></i>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+
+            <!-- Burns Procedure -->
+            <div id="burns-procedure" class="procedure-card" style="display: none;">
+                <div class="procedure-header">
+                    <div class="procedure-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="procedure-info">
+                        <h3>Burn Treatment</h3>
+                        <p>Immediate first aid for burns - stop the burning process</p>
+                        <div class="procedure-meta">
+                            <span class="difficulty">Difficulty: Easy</span>
+                            <span class="time">Time: Immediate cooling required</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="procedure-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Stop the Burning</h4>
+                            <p>Remove person from heat source. For chemical burns, remove contaminated clothing.</p>
+                            <div class="step-tips">
+                                <strong>Safety:</strong> Do not remove clothing stuck to skin - cut around it.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Cool the Burn</h4>
+                            <p>Run cool (not cold) water over the burn for 10-15 minutes. Do not use ice.</p>
+                            <div class="step-tips">
+                                <strong>Important:</strong> Cooling reduces pain and prevents further tissue damage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Assess Severity</h4>
+                            <p>1st degree: Red skin, pain. 2nd degree: Blisters, severe pain. 3rd degree: White/charred, no pain.</p>
+                            <div class="step-tips">
+                                <strong>Warning:</strong> 3rd degree burns require immediate medical attention.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Cover the Burn</h4>
+                            <p>Cover with clean, dry cloth or sterile dressing. Do not apply creams or ointments.</p>
+                            <div class="step-tips">
+                                <strong>Protection:</strong> Covering prevents infection and reduces pain.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Seek Medical Help</h4>
+                            <p>Call 108 for burns larger than palm, on face/hands/feet, or if person shows signs of shock.</p>
+                            <div class="step-tips">
+                                <strong>When to call:</strong> Any 3rd degree burn, electrical burns, or chemical burns.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-actions">
+                    <button class="btn btn-primary" onclick="startBurnTimer()">
+                        <i class="fas fa-play"></i>
+                        Start Treatment Timer
+                    </button>
+                    <button class="btn btn-secondary" onclick="showBurnVideo()">
+                        <i class="fas fa-video"></i>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+
+            <!-- First Aid Basics -->
+            <div id="first-aid-procedure" class="procedure-card" style="display: none;">
+                <div class="procedure-header">
+                    <div class="procedure-icon">
+                        <i class="fas fa-band-aid"></i>
+                    </div>
+                    <div class="procedure-info">
+                        <h3>First Aid Basics</h3>
+                        <p>Essential first aid procedures for common injuries and emergency situations</p>
+                        <div class="procedure-meta">
+                            <span class="difficulty">Difficulty: Easy</span>
+                            <span class="time">Time: Varies by situation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="procedure-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Ensure Scene Safety</h4>
+                            <p>Before approaching any emergency, make sure the scene is safe for you and others.</p>
+                            <div class="step-tips">
+                                <strong>Check for:</strong> Traffic, fire, electrical hazards, toxic substances.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Assess the Person</h4>
+                            <p>Check if the person is conscious and breathing. Look for signs of life and responsiveness.</p>
+                            <div class="step-tips">
+                                <strong>ABCs:</strong> Airway, Breathing, Circulation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Control Bleeding</h4>
+                            <p>Apply direct pressure to wounds with a clean cloth or bandage. Elevate the injured area if possible.</p>
+                            <div class="step-tips">
+                                <strong>Pressure:</strong> Maintain pressure for at least 10-15 minutes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Treat for Shock</h4>
+                            <p>Keep the person warm and comfortable. Elevate their legs if no spinal injury is suspected.</p>
+                            <div class="step-tips">
+                                <strong>Signs:</strong> Pale skin, rapid breathing, weak pulse, confusion.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Call for Help</h4>
+                            <p>Call emergency services for serious injuries, persistent bleeding, or if the person's condition worsens.</p>
+                            <div class="step-tips">
+                                <strong>When to call:</strong> Unconsciousness, severe bleeding, chest pain, difficulty breathing.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-actions">
+                    <button class="btn btn-primary" onclick="startFirstAidTimer()">
+                        <i class="fas fa-play"></i>
+                        Start Assessment
+                    </button>
+                    <button class="btn btn-secondary" onclick="showFirstAidVideo()">
+                        <i class="fas fa-video"></i>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section class="training-section">
+        <div class="container">
+            <h2 class="section-title">Emergency Training</h2>
+            <div class="training-grid">
+                <div class="training-card">
+                    <div class="training-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>CPR Certification</h3>
+                    <p>Get certified in CPR and basic life support through our partner organizations.</p>
+                    <button class="btn btn-primary" onclick="findCPRClass()">
+                        Find Classes
+                    </button>
+                </div>
+
+                <div class="training-card">
+                    <div class="training-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Training</h3>
+                    <p>Practice emergency procedures with our interactive mobile training modules.</p>
+                    <button class="btn btn-primary" onclick="downloadApp()">
+                        Download App
+                    </button>
+                </div>
+
+                <div class="training-card">
+                    <div class="training-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Training</h3>
+                    <p>Join community emergency response training sessions and workshops.</p>
+                    <button class="btn btn-primary" onclick="joinTraining()">
+                        Join Session
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safehood</span>
+                    </div>
+                    <p>Providing life-saving emergency guidance and training.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="distress.html">Distress Support</a></li>
+                        <li><a href="experts.html">Find Experts</a></li>
+                        <li><a href="about.html">About Safehood</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency Numbers</h4>
+                    <ul>
+                        <li><strong>108</strong> - Emergency Services (Ambulance)</li>
+                        <li><strong>100</strong> - Police Emergency</li>
+                        <li><strong>101</strong> - Fire Emergency</li>
+                        <li><strong>1091</strong> - Women Helpline</li>
+                        <li><strong>1098</strong> - Child Helpline</li>
+                        <li><strong>1800-599-0019</strong> - Mental Health Helpline</li>
+                        <li><strong>1800-116-117</strong> - Poison Control</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Safehood. All rights reserved. | This guidance is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="guidance.js"></script>
+</body>
+</html> 

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distress Support - Safehood</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Safehood</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="guidance.html" class="nav-link">Guidance</a></li>
+                <li><a href="distress.html" class="nav-link active">Distress Support</a></li>
+                <li><a href="experts.html" class="nav-link">Find Experts</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero distress-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Emergency</span> Distress Support
+                </h1>
+                <p class="hero-subtitle">
+                    Immediate assistance when you need it most. Connect with emergency services, trained experts, and get real-time support for any crisis situation.
+                </p>
+                <div class="emergency-buttons">
+                    <button class="btn btn-emergency" onclick="callEmergency()">
+                        <i class="fas fa-phone-alt"></i>
+                        Call 108 Now
+                    </button>
+                    <button class="btn btn-primary" onclick="requestExpert()">
+                        <i class="fas fa-user-md"></i>
+                        Request Expert
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <i class="fas fa-ambulance pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services Section -->
+    <section class="emergency-services">
+        <div class="container">
+            <h2 class="section-title">Emergency Services</h2>
+            <div class="services-grid">
+                <div class="service-card emergency">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Emergency Hotlines</h3>
+                    <div class="hotline-list">
+                        <div class="hotline-item">
+                            <span class="hotline-name">Emergency Services (Ambulance)</span>
+                            <span class="hotline-number">108</span>
+                        </div>
+                        <div class="hotline-item">
+                            <span class="hotline-name">Police Emergency</span>
+                            <span class="hotline-number">100</span>
+                        </div>
+                        <div class="hotline-item">
+                            <span class="hotline-name">Fire Emergency</span>
+                            <span class="hotline-number">101</span>
+                        </div>
+                        <div class="hotline-item">
+                            <span class="hotline-name">Women Helpline</span>
+                            <span class="hotline-number">1091</span>
+                        </div>
+                        <div class="hotline-item">
+                            <span class="hotline-name">Child Helpline</span>
+                            <span class="hotline-number">1098</span>
+                        </div>
+                        <div class="hotline-item">
+                            <span class="hotline-name">Mental Health Helpline</span>
+                            <span class="hotline-number">1800-599-0019</span>
+                        </div>
+                        <div class="hotline-item">
+                            <span class="hotline-name">Poison Control</span>
+                            <span class="hotline-number">1800-116-117</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Nearest Hospitals</h3>
+                    <div class="hospital-list">
+                        <div class="hospital-item">
+                            <h4>Manipal Hospitals Whitefield</h4>
+                            <p>Varthur Road, Whitefield, Bangalore</p>
+                            <span class="distance">1.2 miles away</span>
+                            <span class="phone">080-22221111</span>
+                        </div>
+                        <div class="hospital-item">
+                            <h4>Aster Whitefield Hospital</h4>
+                            <p>Sadaramangala Industrial Area, Whitefield</p>
+                            <span class="distance">0.8 miles away</span>
+                            <span class="phone">080-22221111</span>
+                        </div>
+                        <div class="hospital-item">
+                            <h4>Columbia Asia Hospital Whitefield</h4>
+                            <p>Whitefield Main Road, Bangalore</p>
+                            <span class="distance">2.1 miles away</span>
+                            <span class="phone">080-22221111</span>
+                        </div>
+                        <div class="hospital-item">
+                            <h4>Whitefield Hospitals</h4>
+                            <p>Adjacent to FCI, Whitefield</p>
+                            <span class="distance">1.5 miles away</span>
+                            <span class="phone">080-22221111</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Crisis Support Section -->
+    <section class="crisis-support">
+        <div class="container">
+            <h2 class="section-title">Crisis Support Resources</h2>
+            <div class="crisis-grid">
+                <div class="crisis-card">
+                    <div class="crisis-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Mental Health Crisis</h3>
+                    <p>24/7 support for mental health emergencies, depression, anxiety, and suicidal thoughts.</p>
+                    <div class="crisis-actions">
+                        <button class="btn btn-outline" onclick="callCrisisLine()">
+                            <i class="fas fa-phone"></i>
+                            Call Crisis Line
+                        </button>
+                        <button class="btn btn-outline" onclick="chatSupport()">
+                            <i class="fas fa-comments"></i>
+                            Chat Support
+                        </button>
+                    </div>
+                </div>
+
+                <div class="crisis-card">
+                    <div class="crisis-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Domestic Violence</h3>
+                    <p>Safe support for domestic violence situations with immediate assistance and shelter information.</p>
+                    <div class="crisis-actions">
+                        <button class="btn btn-outline" onclick="callDomesticViolence()">
+                            <i class="fas fa-phone"></i>
+                            Call Hotline
+                        </button>
+                        <button class="btn btn-outline" onclick="findShelter()">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Find Shelter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="crisis-card">
+                    <div class="crisis-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Child Safety</h3>
+                    <p>Emergency support for child safety issues, abuse, and neglect situations.</p>
+                    <div class="crisis-actions">
+                        <button class="btn btn-outline" onclick="callChildSafety()">
+                            <i class="fas fa-phone"></i>
+                            Call Child Safety
+                        </button>
+                        <button class="btn btn-outline" onclick="reportAbuse()">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Report Abuse
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-time Support Section -->
+    <section class="realtime-support">
+        <div class="container">
+            <h2 class="section-title">Real-time Support</h2>
+            <div class="support-options">
+                <div class="support-card">
+                    <div class="support-header">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Consultation</h3>
+                    </div>
+                    <p>Connect with medical professionals via video call for immediate assessment and guidance.</p>
+                    <button class="btn btn-primary" onclick="startVideoCall()">
+                        Start Video Call
+                    </button>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>Live Chat</h3>
+                    </div>
+                    <p>Chat with trained crisis counselors and emergency response experts in real-time.</p>
+                    <button class="btn btn-primary" onclick="startChat()">
+                        Start Chat
+                    </button>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-header">
+                        <i class="fas fa-location-arrow"></i>
+                        <h3>Location Sharing</h3>
+                    </div>
+                    <p>Share your location with emergency services and nearby experts for faster response.</p>
+                    <button class="btn btn-primary" onclick="shareLocation()">
+                        Share Location
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact Form -->
+    <section class="emergency-contact">
+        <div class="container">
+            <h2 class="section-title">Emergency Contact Form</h2>
+            <div class="contact-form-container">
+                <form class="emergency-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emergency-type">Emergency Type</label>
+                            <select id="emergency-type" required>
+                                <option value="">Select emergency type</option>
+                                <option value="medical">Medical Emergency</option>
+                                <option value="mental-health">Mental Health Crisis</option>
+                                <option value="domestic-violence">Domestic Violence</option>
+                                <option value="child-safety">Child Safety</option>
+                                <option value="accident">Accident</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency-level">Urgency Level</label>
+                            <select id="urgency-level" required>
+                                <option value="">Select urgency</option>
+                                <option value="critical">Critical - Immediate</option>
+                                <option value="urgent">Urgent - Within 30 min</option>
+                                <option value="moderate">Moderate - Within 2 hours</option>
+                                <option value="low">Low - Non-emergency</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description of Emergency</label>
+                        <textarea id="description" rows="4" placeholder="Please describe the emergency situation..." required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Your phone number" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location (Optional)</label>
+                        <input type="text" id="location" placeholder="Your current location or address">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-emergency">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Emergency Alert
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="callEmergency()">
+                            <i class="fas fa-phone-alt"></i>
+                            Call 108 Instead
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safehood</span>
+                    </div>
+                    <p>Providing immediate emergency support and crisis intervention.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="guidance.html">Emergency Guidance</a></li>
+                        <li><a href="experts.html">Find Experts</a></li>
+                        <li><a href="about.html">About Safehood</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency Numbers</h4>
+                    <ul>
+                        <li><strong>108</strong> - Emergency Services (Ambulance)</li>
+                        <li><strong>100</strong> - Police Emergency</li>
+                        <li><strong>101</strong> - Fire Emergency</li>
+                        <li><strong>1091</strong> - Women Helpline</li>
+                        <li><strong>1098</strong> - Child Helpline</li>
+                        <li><strong>1800-599-0019</strong> - Mental Health Helpline</li>
+                        <li><strong>1800-116-117</strong> - Poison Control</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Safehood. All rights reserved. | In real emergencies, always call 108 first.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="distress.js"></script>
+</body>
+</html> 

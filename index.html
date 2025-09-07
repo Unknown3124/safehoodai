@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safehood - AI-Powered Emergency Response</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Safehood</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="guidance.html" class="nav-link">Emergency Guidance</a></li>
+                <li><a href="distress.html" class="nav-link">Distress Support</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">AI-Powered</span> Emergency Response
+                </h1>
+                <p class="hero-subtitle">
+                    Bridging the gap between crisis and professional help. Safehood connects trained experts with emergencies in real-time, saving lives when every second counts.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openGuidance()">
+                        <i class="fas fa-book-medical"></i>
+                        Emergency Guidance
+                    </button>
+                    <button class="btn btn-secondary" onclick="openDistressSupport()">
+                        <i class="fas fa-phone-alt"></i>
+                        Distress Support
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <i class="fas fa-heartbeat pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How Safehood Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>AI-Powered Location</h3>
+                    <p>Our AI instantly locates the nearest trained experts and alerts them via GPS when an emergency occurs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Network</h3>
+                    <p>Connect with retired nurses, firefighters, and medical professionals who are ready to help in emergencies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Real-Time Guidance</h3>
+                    <p>Step-by-step instructions for CPR, Heimlich maneuvers, and other life-saving procedures for bystanders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>The Problem We Solve</h2>
+                    <p>In emergencies, trained professionals and ambulances can face delays in arrival. Bystanders often panic and lack the knowledge to provide immediate assistance, creating a critical gap in emergency response.</p>
+                    
+                    <h2>Our Solution</h2>
+                    <p>Safehood bridges this gap by creating a community-based emergency alert system that instantly connects trained experts with emergencies. Our AI-powered platform ensures that help arrives faster, and our real-time guidance empowers bystanders to take immediate action.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>0</h3>
+                        <p>Lives Saved</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>0</h3>
+                        <p>Experts Connected</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>0</h3>
+                        <p>Emergencies Responded</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Ready to join Safehood?</h3>
+                <p>Be part of the future of emergency response. Whether you're a trained professional or want to support our mission, we'd love to hear from you.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@safehood.ai</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-discord" style="color: #7289da;"></i>
+                        <a href="https://discord.gg/safehood-community" target="_blank" rel="noopener noreferrer">
+                            Join our Discord for updates & community support
+                        </a>
+                    </div>
+                </div>
+            </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safehood</span>
+                    </div>
+                    <p>Saving lives through AI-powered emergency response.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="guidance.html">Emergency Guidance</a></li>
+                        <li><a href="distress.html">Distress Support</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Safehood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Guidance -->
+    <div id="guidanceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGuidance()">&times;</span>
+            <h2>Emergency Medical Guidance</h2>
+            <div class="guidance-content">
+                <div class="guidance-section">
+                    <h3><i class="fas fa-heart"></i> CPR Instructions</h3>
+                    <div class="step-by-step">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>Check for responsiveness - tap and shout "Are you okay?"</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>Call emergency services (108) immediately</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p>Position the person on their back on a firm surface</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p>Place the heel of one hand on the center of the chest</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <p>Place your other hand on top and interlock fingers</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">6</span>
+                            <p>Push hard and fast - 100-120 compressions per minute</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">7</span>
+                            <p>Allow chest to recoil completely between compressions</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">8</span>
+                            <p>Continue until help arrives or person shows signs of life</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guidance-section">
+                    <h3><i class="fas fa-hand-paper"></i> Heimlich Maneuver</h3>
+                    <div class="step-by-step">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>Stand behind the person and wrap your arms around their waist</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>Make a fist with one hand and place it above the navel</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p>Grasp your fist with your other hand</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p>Give quick, upward thrusts into the abdomen</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <p>Continue until the object is expelled or person becomes unconscious</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guidance-section">
+                    <h3><i class="fas fa-band-aid"></i> First Aid Basics</h3>
+                    <div class="step-by-step">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>Ensure the scene is safe before approaching</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>Check for consciousness and breathing</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p>Control bleeding with direct pressure</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p>Treat for shock by keeping person warm and comfortable</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <p>Call emergency services for serious injuries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Distress Support -->
+    <div id="distressModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDistressSupport()">&times;</span>
+            <div class="distress-content">
+                <i class="fas fa-tools construction-icon"></i>
+                <h2>Work in Progress</h2>
+                <p>Our distress support feature is currently under development. This will include:</p>
+                <ul>
+                    <li>Direct connection to emergency services</li>
+                    <li>Real-time expert consultation</li>
+                    <li>Emergency contact alerts</li>
+                    <li>Location sharing with responders</li>
+                </ul>
+                <p>Please use the Emergency Guidance section for immediate help, or call 108 for emergencies.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
